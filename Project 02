@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Advertisement</title>
+</head>
+<!-- <p ></p> -->
+<fieldset>
+<img src="C:\Users\santh\Downloads\BALA0.jpg" alt="profile-pic" align="right"
+width="1280px"     
+height="853px"> 
+<header>
+<h1 align="center">GOWTHAMMMMMMM ELECTRONICS</h1><hr>
+</header>
+<h2 style="color: blue;">Welcome to Our Advertisement Page</h2>
+<nav>
+<ul style="list-style-type: decimal;">
+<li><a href="xyz">Product Features</a></li>
+<li><a href="#why">Why Choose Us?</a></li>
+<li><a href="#cus">Customer Testimonials</a></li>
+</ul>
+</nav>
+<section id="xyz">
+<h2>Product Features:</h2>
+<ul style="list-style-type: square;">
+<li>High-quality materials</li>
+<li>Long-lasting durability</li>
+<li>Easy to use</li>
+</ul>
+</section>
+<section id="why">
+<h2>Why Choose Us:</h2>
+<ol style="list-style-type: circle;">
+7
+<li>Years of experience</li>
+<li>Customer satisfaction</li>
+<li>Competitive pricing</li>
+</ol>
+</section>
+<section id="cus">
+<h2>Customer Testimonials:</h2>
+<ul style="list-style-type: lower-roman;">
+<li> "I love this product! It's amazing!" - GOWTHAM</li>
+<li> "Best purchase I've ever made." - SANTHOSH</li>
+<li> "Highly recommended!" - DINESH </li>
+</ul>
+</section><hr>
+<footer>
+<p align="center">Contact us for more information: bala@gmail.com</p>
+<p align="center">&copy; 2024 BALAVIGNESGH</p>
+</footer>
+</fieldset>
+</body>
+</html>
