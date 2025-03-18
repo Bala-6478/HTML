@@ -1,0 +1,64 @@
+,<meta name="theme-color" content="#06c1bd">
+<html> 
+<head> 
+     <title>My Portfolio</title> 
+</head> 
+<body> 
+<fieldset> 
+     <img src="C:\Users\santh\Downloads\bala.jpg" alt="profile-pic" align="right"
+width="799px"     
+height="939px"> 
+    <header> 
+        <h1 align="center">BALAVIGNESH</h1> 
+        <h2>Web Developer</h2> 
+    </header> 
+    <nav> 
+        <ul style="color:rgb(10, 245, 68);"> 
+            <li><a href="#about">About Me</a></li> 
+            <li><a href="#projects">Projects</a></li> 
+            <li><a href="#skills">Skills</a></li> 
+            <li><a href="#contact">Contact</a></li> 
+        </ul> 
+    </nav> 
+       <section id="about"> 
+        <h2>About Me</h2> 
+        <p>I'm a passionate web developer with a love for coding and problem-solving. I specialize 
+in creating user-friendly and responsive websites.</p> 
+    </section> 
+       <section id="projects"> 
+        <h2>Projects</h2> 
+        <div class="project"> 
+            <h3>Student Accomodation Reservation Platform</h3> 
+
+ 
+            <p>Developed an Website for students that is helpful to rent the house for their  
+             Accomodation.</p> 
+        </div> 
+        <div class="project"> 
+            <h3>E-commerce Site</h3> 
+            <p>Developed an e-commerce website using HTML, CSS, and JavaScript. Integrated  
+            payment gateways and product catalog. </p></div> 
+    </section> 
+    <section id="skills"> 
+        <h2>Skills</h2> 
+        <p>My Technical Skills:</p> 
+        <ul> 
+            <li>HTML</li> 
+            <li>CSS</li> 
+            <li>JavaScript</li> 
+        </ul> </section> 
+       <section id="contact"> 
+        <h2>Contact</h2> 
+        <p>Feel free to reach out to me:</p> 
+        <address> 
+            Email: <a href="mailto:bala@gmail.com">bala@gamil.com</a><br> 
+            Phone: 
+            9952876478 
+        </address> 
+    </section> 
+    <footer> 
+        <p>&copy; 2023 BALAVIGNESGH</p> 
+    </footer> 
+</fieldset> 
+</body> 
+</html> 
