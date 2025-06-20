@@ -6,6 +6,7 @@
 * Movie Ticket Booking
 * Online Exam Portal
 * Inventory Management System
+* Currency Converter
   
   
   
