@@ -1,62 +1,55 @@
-const APIURL = 'https://api.github.com/users/'
+const APIURL = 'https://api.github.com/users/';
 
-const main = document.getElementById('main')
-const form = document.getElementById('form')
-const search = document.getElementById('search')
-const toggleSwitch = document.getElementById('theme-toggle')
+const form = document.getElementById('form');
+const search = document.getElementById('search');
+const main = document.getElementById('main');
+const toggle = document.getElementById('theme-toggle');
 
-// Load Theme
+// Load saved theme
 document.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme')
-  if (savedTheme === 'light') {
-    document.body.classList.add('light')
-    toggleSwitch.checked = true
+  const saved = localStorage.getItem('theme');
+  if (saved === 'light') {
+    document.body.classList.add('light');
+    toggle.checked = true;
   }
-})
+});
 
-// Toggle Theme
-toggleSwitch.addEventListener('change', () => {
-  document.body.classList.toggle('light')
-  const theme = document.body.classList.contains('light') ? 'light' : 'dark'
-  localStorage.setItem('theme', theme)
-})
+// Toggle theme
+toggle.addEventListener('change', () => {
+  document.body.classList.toggle('light');
+  const currentTheme = document.body.classList.contains('light') ? 'light' : 'dark';
+  localStorage.setItem('theme', currentTheme);
+});
 
-// Fetch GitHub User
+// Fetch user
 async function getUser(username) {
   try {
-    const { data } = await axios(APIURL + username)
-    createUserCard(data)
-    getRepos(username)
+    const { data } = await axios(APIURL + username);
+    createUserCard(data);
+    getRepos(username);
   } catch (err) {
-    if (err.response.status === 404) {
-      createErrorCard('No profile with this username')
-    }
+    createErrorCard('User not found');
   }
 }
 
-// Fetch Repositories
+// Fetch repos
 async function getRepos(username) {
   try {
-    const { data } = await axios(APIURL + username + '/repos?sort=created')
-    addReposToCard(data)
+    const { data } = await axios(APIURL + username + '/repos?sort=created');
+    addReposToCard(data);
   } catch (err) {
-    createErrorCard('Problem fetching repos')
+    createErrorCard('Error fetching repositories');
   }
 }
 
-// Create Profile Card
+// Display profile
 function createUserCard(user) {
-  const userID = user.name || user.login
-  const userBio = user.bio ? `<p>${user.bio}</p>` : ''
-
   const cardHTML = `
     <div class="card">
-      <div>
-        <img src="${user.avatar_url}" alt="${user.name}" class="avatar">
-      </div>
+      <img src="${user.avatar_url}" alt="${user.name}" class="avatar" />
       <div class="user-info">
-        <h2>${userID}</h2>
-        ${userBio}
+        <h2>${user.name || user.login}</h2>
+        <p>${user.bio || ''}</p>
         <ul>
           <li>${user.followers} <strong>Followers</strong></li>
           <li>${user.following} <strong>Following</strong></li>
@@ -65,34 +58,34 @@ function createUserCard(user) {
         <div id="repos"></div>
       </div>
     </div>
-  `
-  main.innerHTML = cardHTML
+  `;
+  main.innerHTML = cardHTML;
 }
 
-// Create Error Card
-function createErrorCard(msg) {
-  main.innerHTML = `<div class="card"><h1>${msg}</h1></div>`
-}
-
-// Add Repositories
+// Display repos
 function addReposToCard(repos) {
-  const reposEl = document.getElementById('repos')
+  const reposEl = document.getElementById('repos');
   repos.slice(0, 5).forEach(repo => {
-    const repoEl = document.createElement('a')
-    repoEl.classList.add('repo')
-    repoEl.href = repo.html_url
-    repoEl.target = '_blank'
-    repoEl.innerText = repo.name
-    reposEl.appendChild(repoEl)
-  })
+    const a = document.createElement('a');
+    a.classList.add('repo');
+    a.href = repo.html_url;
+    a.target = '_blank';
+    a.innerText = repo.name;
+    reposEl.appendChild(a);
+  });
 }
 
-// Submit Handler
+// Error display
+function createErrorCard(message) {
+  main.innerHTML = `<div class="card"><h1>${message}</h1></div>`;
+}
+
+// Form submit
 form.addEventListener('submit', (e) => {
-  e.preventDefault()
-  const user = search.value.trim()
+  e.preventDefault();
+  const user = search.value.trim();
   if (user) {
-    getUser(user)
-    search.value = ''
+    getUser(user);
+    search.value = '';
   }
-})
+});
