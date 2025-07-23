@@ -15,20 +15,18 @@
     </label>
   </div>
 
-  <!-- Centered Search Form -->
-  <div class="search-section">
-    <form class="user-form" id="form">
-      <div class="search-container">
-        <input type="text" id="search" placeholder="Search a GitHub User">
-        <button type="submit" id="search-btn">🔍</button>
-      </div>
+  <!-- Search Section Centered -->
+  <section class="search-section">
+    <form id="form" class="user-form">
+      <input type="text" id="search" placeholder="Search a GitHub User" required />
+      <button id="search-btn" type="submit">🔍</button>
     </form>
-  </div>
+  </section>
 
-  <!-- Profile Output -->
+  <!-- Profile Display -->
   <main id="main"></main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
