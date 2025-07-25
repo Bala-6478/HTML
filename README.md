@@ -25,7 +25,7 @@
 * Loan EMI Calculator
 * GitHub Profiles
 * To Do List
- ![Image Alt
+ ![Image Alt](https://github.com/Bala-6478/HTML/blob/86fe496a58f8563f859ec7429e345d33461f8491/Screenshot%20(47).png)
   
   
   
