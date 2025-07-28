@@ -50,6 +50,7 @@ https://balavignesh2025.neocities.org/Project/To-Do%20List%20Web%20App/
   ![Image Alt](https://github.com/Bala-6478/HTML/blob/2e8341542ca21f891697d92f451514fcfc7692c5/Screenshot%20(52).png)
 
 Live Demo:
+https://balavignesh2025.neocities.org/Project/QR%20CODE%20/in
 
 
 
