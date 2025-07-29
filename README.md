@@ -53,7 +53,7 @@ Live Demo:
 https://balavignesh2025.neocities.org/Project/QR%20CODE%20/in
 * Firecracker
 
-![Image Alt]
+![Image Alt](https://github.com/Bala-6478/HTML/blob/2d21222d835e8fb0b89a3a15b901ada8a4f5e317/Firecracker/Screenshot%20(53).png)
 
 
   
