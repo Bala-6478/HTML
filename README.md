@@ -33,7 +33,7 @@ https://balavignesh2025.neocities.org/Project/Movie%20Ticket%20Booking/Index
   https://balavignesh2025.neocities.org/Project/Online%20Examination%20Portal/
 * Inventory Management System
 
-![Image Alt](
+![Image Alt](https://github.com/Bala-6478/HTML/blob/a9831a0751730136497aab6fd33ed02378a59245/Inventory%20Management%20System/Screenshot%20(54).png)
   
 * Currency Converter
 * Loan EMI Calculator
