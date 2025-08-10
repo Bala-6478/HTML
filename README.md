@@ -76,6 +76,9 @@ https://balavignesh2025.neocities.org/Project/Firecracker/in
 LIVE DEMO 
 https://balavignesh2025.neocities.org/Project/LOGIN%20PAGE/
 
+* Interest Calculator Web App
+
+
   
   
   
