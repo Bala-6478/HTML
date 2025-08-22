@@ -16,11 +16,9 @@ https://balavignesh2025.neocities.org/Project/Web%20ZIP%20Utility/
 ### Live Demo:
 https://balavignesh2025.neocities.org/Project/Movie%20Ticket%20Booking/Index
 ### 5. Online Exam Portal
-
-  ![Image Alt](https://github.com/Bala-6478/HTML/blob/baff62a78dd43d3441cb76aff2502cc8d68abf96/Screenshot%20(50).png)
-
-  Live Demo:
-  https://balavignesh2025.neocities.org/Project/Online%20Examination%20Portal/
+![Image Alt](https://github.com/Bala-6478/HTML/blob/baff62a78dd43d3441cb76aff2502cc8d68abf96/Screenshot%20(50).png)
+### Live Demo:
+https://balavignesh2025.neocities.org/Project/Online%20Examination%20Portal/
 * Inventory Management System
 
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/a9831a0751730136497aab6fd33ed02378a59245/Inventory%20Management%20System/Screenshot%20(54).png)
