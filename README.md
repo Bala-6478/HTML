@@ -2,13 +2,11 @@
 ### 1. Expense Tracker
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/aa45c719632cceca2f4b782f4838086163cc15ad/Screenshot%20(44).png)  
 ### Live Demo:
-  https://balavignesh2025.neocities.org/Project/Web%20Expense%20Tracker/
-### 2. ATM
-  
-  ![Image Alt](https://github.com/Bala-6478/HTML/blob/main/ATM/Screenshot%20(43).png)
-  
+https://balavignesh2025.neocities.org/Project/Web%20Expense%20Tracker/
+### 2. ATM  
+![Image Alt](https://github.com/Bala-6478/HTML/blob/main/ATM/Screenshot%20(43).png)  
 ### Live Demo:
-  https://balavignesh2025.neocities.org/Project/ATM_V1/ATM
+https://balavignesh2025.neocities.org/Project/ATM_V1/ATM
 ### 3. ZIP Utility Tool
   
    ![Image Alt](https://github.com/Bala-6478/HTML/blob/5ece052b6f84f2db13730c004ce04c7929d20238/Screenshot%20(45).png)
