@@ -20,10 +20,8 @@ https://balavignesh2025.neocities.org/Project/Movie%20Ticket%20Booking/Index
 ### Live Demo:
 https://balavignesh2025.neocities.org/Project/Online%20Examination%20Portal/
 ### 6. Inventory Management System
-
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/a9831a0751730136497aab6fd33ed02378a59245/Inventory%20Management%20System/Screenshot%20(54).png)
-
-Live Demo:
+### Live Demo:
 https://balavignesh2025.neocities.org/Project/Inventory%20Management%20System/Index
  
 * Currency Converter
