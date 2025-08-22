@@ -23,8 +23,7 @@ https://balavignesh2025.neocities.org/Project/Online%20Examination%20Portal/
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/a9831a0751730136497aab6fd33ed02378a59245/Inventory%20Management%20System/Screenshot%20(54).png)
 ### Live Demo:
 https://balavignesh2025.neocities.org/Project/Inventory%20Management%20System/Index
- 
-* Currency Converter
+### 7. Currency Converter
 
   ![Image Alt](https://github.com/Bala-6478/HTML/blob/main/Currency%20Converter/Screenshot%20(81).png)
 * Loan EMI Calculator
