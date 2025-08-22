@@ -61,8 +61,7 @@ https://balavignesh2025.neocities.org/Project/Interest%20Calculator%20Web%20App/
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/eaccd7ec95baaf8bb36325f2ccf4db7fbc8d6e38/Media%20Converter/Screenshot%20(61).png)
 ### Live Demo:
 https://balavignesh2025.neocities.org/Project/Media%20Converter/Media%20Converter
-* COSMIC TYPER
-  
+### 17. COSMIC TYPER
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/aaf55bc450fb3226459d902a1da78f1ea945ba90/COSMIC%20TYPER/Screenshot%20(63).png)
   
 
