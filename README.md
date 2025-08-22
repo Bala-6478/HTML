@@ -41,6 +41,8 @@ https://balavignesh2025.neocities.org/Project/Inventory%20Management%20System/In
 
   ![Image Alt](https://github.com/Bala-6478/HTML/blob/main/Currency%20Converter/Screenshot%20(81).png)
 * Loan EMI Calculator
+
+  https://github.com/Bala-6478/HTML/blob/main/Loan%20EMI%20Calculator/Screenshot%20(82).png
 * GitHub Profiles
 
   ![Image Alt](https://github.com/Bala-6478/HTML/blob/f322fecd0583d4136e99dd03638f348bced21d54/Screenshot%20(49).png)
