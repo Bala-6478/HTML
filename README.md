@@ -38,6 +38,8 @@ Live Demo:
 https://balavignesh2025.neocities.org/Project/Inventory%20Management%20System/Index
  
 * Currency Converter
+
+  ![Image Alt] https://github.com/Bala-6478/HTML/blob/main/Currency%20Converter/Screenshot%20(81).png
 * Loan EMI Calculator
 * GitHub Profiles
 
