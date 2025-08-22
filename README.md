@@ -41,19 +41,14 @@ https://balavignesh2025.neocities.org/Project/Inventory%20Management%20System/In
 
   ![Image Alt](https://github.com/Bala-6478/HTML/blob/main/Currency%20Converter/Screenshot%20(81).png)
 * Loan EMI Calculator
-
-  https://github.com/Bala-6478/HTML/blob/main/Loan%20EMI%20Calculator/Screenshot%20(82).png
+  ![Image Alt](https://github.com/Bala-6478/HTML/blob/main/Loan%20EMI%20Calculator/Screenshot%20(82).png)
 * GitHub Profiles
-
   ![Image Alt](https://github.com/Bala-6478/HTML/blob/f322fecd0583d4136e99dd03638f348bced21d54/Screenshot%20(49).png)
 * To Do List
  ![Image Alt](https://github.com/Bala-6478/HTML/blob/86fe496a58f8563f859ec7429e345d33461f8491/Screenshot%20(47).png)
-
 Live Demo :
 https://balavignesh2025.neocities.org/Project/To-Do%20List%20Web%20App/
-
 * Bloom & Petal - Online Flower Shop
-
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/190b5b45e12b6bf27b20fb36092917abc3d80279/Bloom%20%26%20Petal%20-%20Online%20Flower%20Shop/Screenshot%20(58).png)
 
 Live Demo :
