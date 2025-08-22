@@ -37,17 +37,13 @@ https://balavignesh2025.neocities.org/Project/Inventory%20Management%20System/In
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/86fe496a58f8563f859ec7429e345d33461f8491/Screenshot%20(47).png)
 ### Live Demo :
 https://balavignesh2025.neocities.org/Project/To-Do%20List%20Web%20App/
-* Bloom & Petal - Online Flower Shop
+### 11. Bloom & Petal - Online Flower Shop
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/190b5b45e12b6bf27b20fb36092917abc3d80279/Bloom%20%26%20Petal%20-%20Online%20Flower%20Shop/Screenshot%20(58).png)
-
-Live Demo :
+### Live Demo :
 https://balavignesh2025.neocities.org/Project/Bloom%20&%20Petal%20-%20Online%20Flower%20Shop/in
-
-* QR code generator
-
-  ![Image Alt](https://github.com/Bala-6478/HTML/blob/2e8341542ca21f891697d92f451514fcfc7692c5/Screenshot%20(52).png)
-
-Live Demo:
+### 12. QR code generator
+![Image Alt](https://github.com/Bala-6478/HTML/blob/2e8341542ca21f891697d92f451514fcfc7692c5/Screenshot%20(52).png)
+### Live Demo:
 https://balavignesh2025.neocities.org/Project/QR%20CODE%20/in
 * Firecracker
 
