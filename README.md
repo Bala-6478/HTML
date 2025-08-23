@@ -28,7 +28,7 @@ https://balavignesh2025.neocities.org/Project/Inventory%20Management%20System/In
 ### 8. Loan EMI Calculator
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/main/Loan%20EMI%20Calculator/Screenshot%20(82).png)
 ### Live Demo:
-
+https://balavignesh2025.neocities.org/Project/Loan%20EMI%20Calculator/
 ### 9. GitHub Profiles
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/f322fecd0583d4136e99dd03638f348bced21d54/Screenshot%20(49).png)
 ### 10. To Do List
