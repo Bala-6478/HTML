@@ -54,7 +54,7 @@ https://balavignesh2025.neocities.org/Project/LOGIN%20PAGE/
 ### 15. Interest Calculator Web App
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/a5d5af6e6c3e8bb94b68b9db0e04a79083ba87dc/Interest%20Calculator%20Web%20App/Screenshot%20(59).png)
 ### Live Demo:
-https://balavignesh2025.neocities.org/Project/Interest%20Calculator%20Web%20App/
+https://balavignesh2025.neocities.org/Project/Modern%20Interest%20Calculator/in
 ### 16. Media Converter
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/eaccd7ec95baaf8bb36325f2ccf4db7fbc8d6e38/Media%20Converter/Screenshot%20(61).png)
 ### Live Demo:
