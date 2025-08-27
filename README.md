@@ -50,7 +50,6 @@ https://balavignesh2025.neocities.org/Project/Firecracker/in
 ### 14. SAMPLE LOGIN PAGE 
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/e8bd41aadc9726a54c1b87cedf7429a584d9f571/LOGIN%20PAGE/Screenshot%20(56).png)
 ### LIVE DEMO 
-https://balavignesh2025.neocities.org/Project/LOGIN%20PAGE/
 ### 15. Interest Calculator Web App
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/a5d5af6e6c3e8bb94b68b9db0e04a79083ba87dc/Interest%20Calculator%20Web%20App/Screenshot%20(59).png)
 ### Live Demo:
