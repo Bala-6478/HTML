@@ -57,7 +57,8 @@ https://balavignesh2025.neocities.org/Project/Firecracker/in
 https://balavignesh2025.neocities.org/Project/Media%20Converter/Media%20Converter
 ### 17. COSMIC TYPER
 ![Image Alt](https://github.com/Bala-6478/HTML/blob/aaf55bc450fb3226459d902a1da78f1ea945ba90/COSMIC%20TYPER/Screenshot%20(63).png)
-### 18.
+### 18. Speedometer
+
   
 
 
