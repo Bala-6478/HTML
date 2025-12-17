@@ -4,7 +4,7 @@ This repository showcases web development projects built exclusively using the f
 
 ---   
 
-### ✅ Core Skill Breakdown   
+### ✅ Core Skill Breakdown      
 
 Every project within this repository utilizes the following foundational tools:
 
