@@ -1,9 +1,8 @@
 # 🌐 Web Projects Collection
 
-This repository contains a collection of my web-based projects built using **HTML, CSS, JavaScript, and related technologies**. Each project focuses on solving real-world problems and improving user experience.
+This repository contains a collection of my web-based projects built using **HTML, CSS, JavaScript, and related technologies**. 
 
 ## 🚀 Projects List
-
 ### 1. ATM Project
 🔗 Demo: https://balavignesh2025.neocities.org/Project/ATM_V1/ATM
 
@@ -65,6 +64,5 @@ This repository contains a collection of my web-based projects built using **HTM
 ## 📬 Contact
 If you have any suggestions or feedback, feel free to reach out!
 DEVELOPED BY BALAVIGNESH A (Bala-6478) not for !.
-
 
 ⭐ Don’t forget to **star this repository** if you like these projects!
