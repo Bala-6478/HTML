@@ -2,6 +2,27 @@
 
 This repository contains a collection of my web-based projects built using **HTML, CSS, JavaScript, and related technologies**. 
 
+
+## 🛠️ Technologies Used
+* HTML5
+* CSS3
+* JavaScript
+* Basic Web APIs
+
+## 📌 Features
+* User-friendly interfaces
+* Real-world use cases
+* Responsive design
+* Interactive functionalities
+  
+## 🙌 Author
+**Balavignesh A**
+💼 Frontend Developer
+---
+⭐ If you like this repository, consider giving it a star!  
+
+---
+
 # 🚀 Projects List
 ### 1. ATM Project
 🔗 Demo: https://balavignesh2025.neocities.org/Project/ATM_V1/ATM
@@ -49,20 +70,3 @@ This repository contains a collection of my web-based projects built using **HTM
 🔗 Demo: https://balavignesh2025.neocities.org/Project/To-Do%20List%20Web%20App/
 ---
 
-## 🛠️ Technologies Used
-* HTML5
-* CSS3
-* JavaScript
-* Basic Web APIs
-
-## 📌 Features
-* User-friendly interfaces
-* Real-world use cases
-* Responsive design
-* Interactive functionalities
-  
-## 🙌 Author
-**Balavignesh A**
-💼 Frontend Developer
----
-⭐ If you like this repository, consider giving it a star!
