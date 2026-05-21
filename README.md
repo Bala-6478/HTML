@@ -61,7 +61,7 @@
 🔗 Demo: https://balavignesh2025.neocities.org/Project/Online%20Examination%20Portal/
 ---
 ### 13.  QR Code Generator
-🔗 Demo: https://balavignesh2025.neocities.org/Project/QR%20CODE%20/OR
+🔗 Demo: https://balavignesh2025.neocities.org/Project/QR%20CODE%20/QR
 ---
 ### 14. ZIP Utility Tool
 🔗 Demo: https://balavignesh2025.neocities.org/Project/Web%20ZIP%20Utility/
