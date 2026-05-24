@@ -31,7 +31,7 @@
 🔗 Demo: https://balavignesh2025.neocities.org/Project/Bloom%20&%20Petal%20-%20Online%20Flower%20Shop/in
 ---
 ### 3. Cosmic Typer
-🔗 Demo: https://balavignesh2025.neocities.org/Project/COSMIC%20TYPER/in
+🔗 Demo: https://balavignesh2025.neocities.org/Project/COSMIC%20TYPER/cosmic-typer
 ---
 ### 4.  Expense Tracker
 🔗 Demo: https://balavignesh2025.neocities.org/Project/Expense%20Tracker/
