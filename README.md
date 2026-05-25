@@ -52,7 +52,7 @@
 🔗 Demo: https://balavignesh2025.neocities.org/Project/Loan%20EMI%20Calculator/
 ---
 ### 10.  Media Converter
-🔗 Demo: https://balavignesh2025.neocities.org/Project/Media%20Converter/Media%20Converter
+🔗 Demo: https://balavignesh2025.neocities.org/Project/Media%20Converter/Media%20kit
 ---
 ### 11.  Movie Ticket Booking
 🔗 Demo: https://balavignesh2025.neocities.org/Project/Movie%20Ticket%20Booking/Movie
