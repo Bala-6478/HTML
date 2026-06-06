@@ -1,4 +1,4 @@
-# 🌐 Web Projects Collection
+# 🌐 HTML  Web Projects Collection
 
 ~ This repository contains a collection of my web-based projects built using **HTML, CSS, JavaScript, and related technologies**. 
 
