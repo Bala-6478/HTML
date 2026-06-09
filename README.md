@@ -48,7 +48,7 @@
 🔗 Demo: https://balavignesh2025.neocities.org/Project/Library%20Web%20App/Books
 ---
 ### 9. Loan EMI Calculator
-🔗 Demo: 
+🔗 Demo:  https://balavignesh2025.neocities.org/Project/Loan%20EMI%20Calculator/EMI
 ---
 ### 10.  Media Converter
 🔗 Demo: https://balavignesh2025.neocities.org/Project/Media%20Converter/Media%20kit
