@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Loan EMI Calculator</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0078D7',
+                        primaryHover: '#005fa3'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Load Chart.js and html2pdf.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        body { font-family: 'Inter', 'Segoe UI', sans-serif; }
+        
+        /* Custom scrollbar for the amortization table on desktop */
+        ::-webkit-scrollbar { height: 8px; width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 4px; }
+        .dark ::-webkit-scrollbar-thumb { background-color: #475569; }
+    </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300 min-h-screen p-4 md:p-8">
+
+    <!-- Container to be exported to PDF -->
+    <div id="exportContainer" class="max-w-4xl mx-auto bg-white dark:bg-gray-800 shadow-xl rounded-2xl overflow-hidden transition-colors duration-300">
+        
+        <!-- Header -->
+        <div class="px-6 py-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+            <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Loan EMI Calculator</h1>
+            <label class="flex items-center cursor-pointer space-x-2">
+                <span class="text-xl">🌗</span>
+                <div class="relative">
+                    <input type="checkbox" id="darkModeToggle" class="sr-only" />
+                    <div class="block bg-gray-300 dark:bg-gray-600 w-10 h-6 rounded-full transition"></div>
+                    <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition transform dark:translate-x-4"></div>
+                </div>
+            </label>
+        </div>
+
+        <div class="p-6 md:p-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Loan Amount -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Loan Amount (₹)</label>
+                    <input type="number" id="loanAmount" placeholder="e.g. 500000" 
+                        class="w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors text-gray-900 dark:text-white outline-none" />
+                </div>
+
+                <!-- Interest Rate -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Interest Rate (% p.a)</label>
+                    <input type="number" id="interestRate" placeholder="e.g. 7.5" step="0.1"
+                        class="w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors text-gray-900 dark:text-white outline-none" />
+                </div>
+
+                <!-- Duration -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Duration (Years)</label>
+                    <input type="number" id="duration" placeholder="e.g. 5" 
+                        class="w-full px-4 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors text-gray-900 dark:text-white outline-none" />
+                </div>
+            </div>
+
+            <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <button onclick="calculateEMI()" 
+                    class="w-full sm:w-auto px-8 py-3 bg-primary hover:bg-primaryHover text-white font-semibold rounded-lg shadow-md transition-colors duration-200">
+                    Calculate EMI
+                </button>
+                
+                <button id="exportBtn" 
+                    class="w-full sm:w-auto px-6 py-3 bg-gray-800 hover:bg-gray-700 dark:bg-gray-200 dark:hover:bg-gray-300 dark:text-gray-900 text-white font-semibold rounded-lg shadow-md transition-colors duration-200 flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                    Export to PDF
+                </button>
+            </div>
+
+            <!-- Custom Error Message Box -->
+            <div id="errorBox" class="hidden mt-4 p-4 bg-red-100 border-l-4 border-red-500 text-red-700 rounded shadow-sm transition-opacity">
+                <strong>Error: </strong> <span id="errorText">Please enter valid input values!</span>
+            </div>
+
+            <!-- Results Section (Hidden initially, shown after calc) -->
+            <div id="resultsSection" class="hidden mt-10 pt-8 border-t border-gray-200 dark:border-gray-700">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    
+                    <!-- Text Summaries -->
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 dark:bg-gray-700/50 p-6 rounded-xl border border-gray-100 dark:border-gray-700">
+                            <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">Monthly EMI</h2>
+                            <div class="text-4xl font-bold text-primary dark:text-blue-400" id="emi">₹0.00</div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-xl border border-gray-100 dark:border-gray-700">
+                                <p class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Total Principal</p>
+                                <p class="text-lg font-semibold text-gray-900 dark:text-white" id="displayPrincipal">₹0.00</p>
+                            </div>
+                            <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-xl border border-gray-100 dark:border-gray-700">
+                                <p class="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Total Interest</p>
+                                <p class="text-lg font-semibold text-red-600 dark:text-red-400" id="totalInterest">₹0.00</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-700/50 p-4 rounded-xl border border-gray-100 dark:border-gray-700 flex justify-between items-center">
+                            <p class="text-sm font-medium text-gray-500 dark:text-gray-400">Total Payment (Principal + Interest)</p>
+                            <p class="text-xl font-bold text-gray-900 dark:text-white" id="totalPayment">₹0.00</p>
+                        </div>
+                    </div>
+
+                    <!-- Pie Chart -->
+                    <div class="relative h-64 w-full flex justify-center">
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Amortization Table -->
+                <div class="mt-12">
+                    <h2 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Amortization Schedule</h2>
+                    <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <table class="w-full text-left border-collapse" id="amortizationTable">
+                            <thead>
+                                <tr class="bg-primary text-white text-sm uppercase tracking-wider">
+                                    <th class="px-6 py-4 font-semibold">Month</th>
+                                    <th class="px-6 py-4 font-semibold">Principal Component</th>
+                                    <th class="px-6 py-4 font-semibold">Interest Component</th>
+                                    <th class="px-6 py-4 font-semibold">Remaining Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 dark:divide-gray-700 text-gray-800 dark:text-gray-300 bg-white dark:bg-gray-800 text-sm">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let chart;
+
+        // Utility function to format currency as Indian Rupees beautifully
+        const formatCurrency = (amount) => {
+            return new Intl.NumberFormat('en-IN', {
+                style: 'currency',
+                currency: 'INR',
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            }).format(amount);
+        };
+
+        // Utility function to show custom error message (Replacing alert)
+        const showError = (message) => {
+            const errorBox = document.getElementById('errorBox');
+            document.getElementById('errorText').innerText = message;
+            errorBox.classList.remove('hidden');
+            
+            // Hide automatically after 4 seconds
+            setTimeout(() => {
+                errorBox.classList.add('hidden');
+            }, 4000);
+        };
+
+        function calculateEMI() {
+            const principal = parseFloat(document.getElementById('loanAmount').value);
+            const annualRate = parseFloat(document.getElementById('interestRate').value);
+            const years = parseFloat(document.getElementById('duration').value);
+
+            // Validation
+            if (isNaN(principal) || isNaN(annualRate) || isNaN(years) || principal <= 0 || annualRate <= 0 || years <= 0) {
+                showError("Please enter valid, positive numbers for all fields.");
+                return;
+            }
+
+            // Hide error if previously shown
+            document.getElementById('errorBox').classList.add('hidden');
+            // Show results container
+            document.getElementById('resultsSection').classList.remove('hidden');
+
+            const monthlyRate = annualRate / 12 / 100;
+            const months = years * 12;
+
+            // EMI Formula
+            const emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, months)) /
+                        (Math.pow(1 + monthlyRate, months) - 1);
+
+            const totalPayment = emi * months;
+            const totalInterest = totalPayment - principal;
+
+            // Update Text Values
+            document.getElementById('emi').innerText = formatCurrency(emi);
+            document.getElementById('displayPrincipal').innerText = formatCurrency(principal);
+            document.getElementById('totalPayment').innerText = formatCurrency(totalPayment);
+            document.getElementById('totalInterest').innerText = formatCurrency(totalInterest);
+
+            // Render visual data
+            showPieChart(principal, totalInterest);
+            showAmortizationTable(principal, monthlyRate, months, emi);
+
+            // Save inputs to localStorage
+            localStorage.setItem("loanAmount", principal);
+            localStorage.setItem("interestRate", annualRate);
+            localStorage.setItem("duration", years);
+        }
+
+        function showPieChart(principal, interest) {
+            const ctx = document.getElementById('pieChart').getContext('2d');
+            const isDark = document.documentElement.classList.contains('dark');
+            const textColor = isDark ? '#e5e7eb' : '#374151';
+
+            if (chart) chart.destroy(); // Reset previous chart
+
+            Chart.defaults.color = textColor;
+            Chart.defaults.font.family = "'Inter', 'Segoe UI', sans-serif";
+
+            chart = new Chart(ctx, {
+                type: 'doughnut', // Doughnut looks slightly more modern, but pie works too.
+                data: {
+                    labels: ['Principal Amount', 'Total Interest'],
+                    datasets: [{
+                        data: [principal, interest],
+                        backgroundColor: [
+                            '#0078D7', // Primary Blue
+                            '#ef4444'  // Red for interest
+                        ],
+                        borderWidth: isDark ? 2 : 0,
+                        borderColor: isDark ? '#1f2937' : '#ffffff',
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                font: { size: 14 }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) label += ': ';
+                                    if (context.raw !== null) {
+                                        label += formatCurrency(context.raw);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function showAmortizationTable(principal, monthlyRate, months, emi) {
+            const tbody = document.querySelector("#amortizationTable tbody");
+            tbody.innerHTML = "";
+
+            let balance = principal;
+
+            for (let i = 1; i <= months; i++) {
+                const interest = balance * monthlyRate;
+                let principalPart = emi - interest;
+                
+                // Adjust final month rounding issues
+                if (i === months) {
+                    principalPart = balance;
+                    balance = 0;
+                } else {
+                    balance -= principalPart;
+                }
+
+                if (balance < 0.01) balance = 0;
+
+                const row = document.createElement("tr");
+                // Adding alternating row colors via Tailwind classes
+                row.className = i % 2 === 0 ? "bg-gray-50 dark:bg-gray-700/30 hover:bg-gray-100 dark:hover:bg-gray-600/50 transition-colors" : "hover:bg-gray-100 dark:hover:bg-gray-600/50 transition-colors";
+                
+                row.innerHTML = `
+                    <td class="px-6 py-3 whitespace-nowrap font-medium">${i}</td>
+                    <td class="px-6 py-3 whitespace-nowrap text-green-600 dark:text-green-400">${formatCurrency(principalPart)}</td>
+                    <td class="px-6 py-3 whitespace-nowrap text-red-500 dark:text-red-400">${formatCurrency(interest)}</td>
+                    <td class="px-6 py-3 whitespace-nowrap font-medium">${formatCurrency(balance)}</td>
+                `;
+                tbody.appendChild(row);
+            }
+        }
+
+        const darkToggle = document.getElementById("darkModeToggle");
+
+        function setDarkMode(isDark) {
+            if (isDark) {
+                document.documentElement.classList.add("dark");
+                darkToggle.checked = true;
+            } else {
+                document.documentElement.classList.remove("dark");
+                darkToggle.checked = false;
+            }
+            
+            // Re-render chart if it exists to update text colors
+            if (chart) {
+                const principal = parseFloat(document.getElementById('loanAmount').value);
+                const annualRate = parseFloat(document.getElementById('interestRate').value);
+                const years = parseFloat(document.getElementById('duration').value);
+                if (!isNaN(principal) && !isNaN(annualRate) && !isNaN(years)) {
+                     // Recalculate interest just for the chart redraw
+                     const emi = (principal * (annualRate/12/100) * Math.pow(1 + (annualRate/12/100), years*12)) / (Math.pow(1 + (annualRate/12/100), years*12) - 1);
+                     const totalInterest = (emi * years * 12) - principal;
+                     showPieChart(principal, totalInterest);
+                }
+            }
+        }
+
+        darkToggle.addEventListener("change", () => {
+            const isDark = darkToggle.checked;
+            setDarkMode(isDark);
+            localStorage.setItem("darkMode", isDark);
+        });
+
+        // Load saved theme & inputs on load
+        window.addEventListener("load", () => {
+            // Check Local Storage or System Preferences for Dark Mode
+            const savedTheme = localStorage.getItem("darkMode");
+            if (savedTheme === "true") {
+                setDarkMode(true);
+            } else if (savedTheme === null && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                setDarkMode(true);
+            }
+
+            // Restore inputs
+            const savedAmount = localStorage.getItem("loanAmount");
+            const savedRate = localStorage.getItem("interestRate");
+            const savedDuration = localStorage.getItem("duration");
+
+            if (savedAmount) document.getElementById("loanAmount").value = savedAmount;
+            if (savedRate) document.getElementById("interestRate").value = savedRate;
+            if (savedDuration) document.getElementById("duration").value = savedDuration;
+
+            // Automatically calculate if data exists
+            if (savedAmount && savedRate && savedDuration) {
+                calculateEMI();
+            }
+        });
+
+        // Export to PDF
+        document.getElementById("exportBtn").addEventListener("click", () => {
+            const element = document.getElementById("exportContainer");
+            
+            // Configuration for html2pdf
+            const opt = {
+                margin:       [0.5, 0.5, 0.5, 0.5], // top, left, bottom, right
+                filename:     'loan-emi-report.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, useCORS: true },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+
+            // Before exporting, slightly modify the layout temporarily for better PDF fitting if needed.
+            // (e.g. The overflow-x-auto might cut off tables in PDFs sometimes, but scale:2 usually fixes it).
+            html2pdf().set(opt).from(element).save();
+        });
+    </script>
+</body>
+</html>
