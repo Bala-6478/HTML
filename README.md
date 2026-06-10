@@ -39,7 +39,7 @@
 🔗 Demo: https://balavignesh2025.neocities.org/Project/Firecracker/in
 ---
 ### 6. Interest Calculator Web App
-🔗 Demo: 
+🔗 Demo:  https://balavignesh2025.neocities.org/Project/Modern%20Interest%20Calculator/interest_cal
 ---
 ### 7.  Inventory Management System
 🔗 Demo: https://balavignesh2025.neocities.org/Project/Inventory%20Management%20System/Index
