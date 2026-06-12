@@ -33,7 +33,7 @@
 🔗 Demo: https://balavignesh2025.neocities.org/Project/COSMIC%20TYPER/cosmic-typer
 ---
 ### 4.  Expense Tracker
-🔗 Demo: https://balavignesh2025.neocities.org/Project/Expense%20Tracker/
+🔗 Demo: 
 ---
 ### 5.  Firecracker
 🔗 Demo: https://balavignesh2025.neocities.org/Project/Firecracker/in
