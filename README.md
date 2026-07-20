@@ -7,7 +7,7 @@
 * CSS3
 * JavaScript
 * Basic Web APIs  
-
+  
 ## 📌 Features
 * User-friendly interfaces
 * Real-world use cases
