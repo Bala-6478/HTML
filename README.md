@@ -6,7 +6,7 @@
 * HTML5  
 * CSS3 
 * JavaScript
-* Basic Web APIs  
+* Basic Web APIs   
   
 ## 📌 Features
 * User-friendly interfaces
