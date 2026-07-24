@@ -5,7 +5,7 @@
 ## 🛠️ Technologies Used
 * HTML5  
 * CSS3 
-* JavaScript
+* JavaScript 
 * Basic Web APIs    
    
 ## 📌 Features
