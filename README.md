@@ -10,7 +10,7 @@
    
 ## 📌 Features
 * User-friendly interfaces
-* Real-world use cases
+* Real-world use cases 
 * Responsive design
 * Interactive functionalities
   
