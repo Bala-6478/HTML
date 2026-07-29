@@ -11,7 +11,7 @@
 ## 📌 Features
 * User-friendly interfaces
 * Real-world use cases 
-* Responsive design
+* Responsive design 
 * Interactive functionalities
   
 ## 🙌 Author
