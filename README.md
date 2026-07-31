@@ -14,7 +14,7 @@
 * Responsive design 
 * Interactive functionalities
   
-## 🙌 Author
+## 🙌 Author 
 **Balavignesh A**
 💼 Frontend Developer
 ---
