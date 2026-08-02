@@ -16,7 +16,7 @@
   
 ## 🙌 Author 
 **Balavignesh A**
-💼 Frontend Developer
+💼 Frontend Developer 
 ---
 ⭐ If you like this repository, consider giving it a star!  
 
