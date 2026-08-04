@@ -13,7 +13,7 @@
 * Real-world use cases 
 * Responsive design 
 * Interactive functionalities 
-  
+   
 ## 🙌 Author 
 **Balavignesh A**
 💼 Frontend Developer 
