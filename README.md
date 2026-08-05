@@ -12,7 +12,7 @@
 * User-friendly interfaces
 * Real-world use cases 
 * Responsive design 
-* Interactive functionalities 
+* Interactive functionalities  
    
 ## 🙌 Author 
 **Balavignesh A**
