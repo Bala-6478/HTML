@@ -8,7 +8,7 @@
 * JavaScript    
 * Basic Web APIs       
     
-## 📌 Features
+## 📌 Features 
 * User-friendly interfaces
 * Real-world use cases 
 * Responsive design 
